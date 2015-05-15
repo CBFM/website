@@ -65,13 +65,14 @@
 				<p><b>First download and install VirtualBox for your OS. Then Install the CBFM Appliance.
 				</p></b>
 				<hr class="separator"/>			
-					<p align="center"><a href="#2.1">Windows</a></p>
-					<p align="center"><a href="#2.2">iOS</a></p>
-					<p align="center"><a href="#2.3">Linux</a></p>
-					<p align="center"><a href="#2.4">CBFM Workshop Appliance Installation</a></p>
+					<p align="center"><a href="#2.1">1.1 - Windows</a></p>
+					<p align="center"><a href="#2.2">1.2 - iOS</a></p>
+					<p align="center"><a href="#2.3">1.3 - Linux</a></p>
+					<p align="center"><a href="#2.4">2 - CBFM Workshop Appliance Installation v2.0</a></p>
+					<p align="center"><a href="#2.5">3 - Installation of Python in CBFM Appliance <br /> (not required in version v2.0)</a></p> 
 				<hr class="separator"/>
 					<p><a name="2.1"></a></p>
-					<p><b>Windows:
+					<p><b>1.1 - Windows:
 					</p></b>
 					<p>MS Windows 7 installation guide (tested and verified):<br />
 					1. Download Virtual Box <a href="http://download.virtualbox.org/virtualbox/4.3.24/VirtualBox-4.3.24-98716-Win.exe">here</a>.<br />
@@ -94,7 +95,7 @@
 					</p>
 				<hr class="separator"/>
 				<p><a name="2.2"></a></p>
-					<h3>iOS</h3>
+					<h3>1.2 - iOS</h3>
 					<p>Download Virtual Box <a href="http://download.virtualbox.org/virtualbox/4.3.24/VirtualBox-4.3.24-98716-OSX.dmg">here</a>.<br />
 					1. Double click downloaded file.<br />
 					2. Double click on "Double click on this icon..." and click Continue.<br />
@@ -107,7 +108,7 @@
 					</p>
 				<hr class="separator"/>	
 					<p><a name="2.3"></a></p>
-					<h3>Linux</h3>
+					<h3>1.3 - Linux</h3>
 					<p><b>If I'm running Linux why do I need a Virtual Machine?
 					</b></p>
 					<p>If you are already Linux, a virtual machine allows you to follow along in the class step by step without modifying your actual system. In short, explore, try and break things and your computer will still be just fine underneath. 
@@ -127,7 +128,7 @@
 					</p>
 				<hr class="separator"/>	
 					<p><a name="2.4"></a></p>
-					<h3>CBFM Workshop Appliance Installation</h3>
+					<h3>2 - CBFM Workshop Appliance Installation v2.0</h3>
 					<p>After you installed the Virtual Box Software (above), you have to download and install the CBFM Workshop Appliance running Ubuntu 14.04.2:<br />
 					1. Download Ubuntu 64bit Appliance <a href="https://drive.google.com/file/d/0BxlFmQoDgYewWS1EemRuU3lmZ00/view?usp=sharing" target="_blank">here</a>. The file size is more than 2 GB so be aware that the download may take a while. Don't worry if google tells you "Whoops! There was a problem with the preview", just proceed by clicking "Download".<br />
 					2. Start your Virtual Box <em>(if not already running from <a href="#2.1">above</a>)</em>.<br />
@@ -142,6 +143,8 @@
 					<img src="http://i.imgur.com/0p4pCr8.png" /><br />
 					6. Click <strong>Start</strong> to start the CBFM Workshop Appliance and have fun!<br />
 					</p>
+					<p><b>The CBFM Appliance v2.0 has Python already installed. Step 3 (below) is not required! Please find the example data on Dropbox or in your local folder: <FONT FACE="courier">~/Course_Material/Data</FONT>.</b>   <br />
+					</p>
 					
 					<p><b>If you have problems running the CBFM Appliance on Windows with 64bit, please refer to <a href="https://www.youtube.com/watch?v=1wc3fjGtPHU" target="_blank">this video</a> for a possible solution.</b>   <br />
 					</p>
@@ -154,6 +157,36 @@
 					4. Change Folder Path to /home/username/<br />
 					5.Click OK<br />
 					6. Click Start up at the top<br />
+					</p>
+				<hr class="separator"/>	
+					<p><a name="2.5"></a></p>
+					<h3>3 - Install the Anaconda python distribution</h3>
+					<p><b>(Not required when you're running the CBFM Appliance v2.0)
+					</b></p>
+
+					<p>
+					1. Open a terminal and run the following commands.<br />
+					<FONT FACE="courier">
+					wget https://3230d63b5fc54e62148e-c95ac804525aac4b6dba79b00b39d1d3.ssl.cf1.rackcdn.com/Anaconda-2.2.0-Linux-x86_64.sh <br />
+					bash Anaconda-2.2.0-Linux-x86_64.sh<br />
+					</FONT>
+					Follow instructions: press space bar to page through license agreement, then enter 'yes'. Press Enter to accept default install location. Wait for the install to finish and answer 'yes' to prepend the install location to your PATH.<br />
+					<br />
+					2. Install Emacs, a powerful text editor for programming<br />
+					<FONT FACE="courier">
+					sudo apt-get install emacs24<br />
+					</FONT>
+					(Recall the password for the CBFM virtual machine is 'user'.) I have provided a minimal configuration file that sets some nice default options:<br />
+					<FONT FACE="courier">
+					wget https://www.dropbox.com/s/wcn3p3ofopeiosx/cbfm-dot-emacs<br />
+					mv cbfm-dot-emacs .emacs<br />
+					</FONT>
+					<br />
+					3. Download example data and script<br />
+					<FONT FACE="courier">
+					wget https://www.dropbox.com/s/mydpltne4ecq1o3/cbfm-gbfilter-example.py<br />
+					wget https://www.dropbox.com/s/u36cofg6434qq6c/gbpln2.seq.gz<br />
+					</FONT>
 					</p>
 				<hr class="separator"/>	
 			</li>
